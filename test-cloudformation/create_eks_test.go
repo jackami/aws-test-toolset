@@ -40,7 +40,7 @@ func Test_CreateEKSNodeGroupStack(t *testing.T) {
 
 	paras = append(paras, &cloudformation.Parameter{
 		ParameterKey:   aws.String("ClusterControlPlaneSecurityGroup"),
-		ParameterValue: aws.String("sg-0a5f6c01c8f0aa2ad"),
+		ParameterValue: aws.String("sg-id"),
 	})
 
 	paras = append(paras, &cloudformation.Parameter{
@@ -55,7 +55,7 @@ func Test_CreateEKSNodeGroupStack(t *testing.T) {
 
 	paras = append(paras, &cloudformation.Parameter{
 		ParameterKey:   aws.String("VpcId"),
-		ParameterValue: aws.String("vpc-037ca0340570efd3f"),
+		ParameterValue: aws.String("vpc-id"),
 	})
 
 	paras = append(paras, &cloudformation.Parameter{
@@ -210,7 +210,7 @@ func Test_UpdateTemplateStack(t *testing.T) {
 
 	paras = append(paras, &cloudformation.Parameter{
 		ParameterKey:   aws.String("ClusterControlPlaneSecurityGroup"),
-		ParameterValue: aws.String("sg-0a5f6c01c8f0aa2ad"),
+		ParameterValue: aws.String("sg-id"),
 	})
 
 	paras = append(paras, &cloudformation.Parameter{
@@ -225,7 +225,7 @@ func Test_UpdateTemplateStack(t *testing.T) {
 
 	paras = append(paras, &cloudformation.Parameter{
 		ParameterKey:   aws.String("VpcId"),
-		ParameterValue: aws.String("vpc-037ca0340570efd3f"),
+		ParameterValue: aws.String("vpc-id"),
 	})
 
 	paras = append(paras, &cloudformation.Parameter{

@@ -19,7 +19,7 @@ func Test_EC2Describe(t *testing.T)  {
 	svc := ec2.New(sess)
 	input := &ec2.DescribeInstancesInput{
 		InstanceIds: []*string{
-			aws.String("i-00cc2b5adf38b1ab2"),
+			aws.String("i-instanceid"),
 		},
 	}
 
@@ -51,7 +51,7 @@ func Test_CreateLaunchTemplate(t *testing.T) {
 	
 	input := &ec2.CreateLaunchTemplateInput{
 		LaunchTemplateData: &ec2.RequestLaunchTemplateData{
-			ImageId:      aws.String("ami-8c1be5f6"),
+			ImageId:      aws.String("ami-id"),
 			InstanceType: aws.String("t2.small"),
 			NetworkInterfaces: []*ec2.LaunchTemplateInstanceNetworkInterfaceSpecificationRequest{
 				{
